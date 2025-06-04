@@ -1,0 +1,125 @@
+.header {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  padding: 1.2rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: var(--color-primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: var(--color-primary);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1F2937;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+
+  .nav-links li a::after {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+
+/* Breakpoint for very small mobile devices */
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.6rem;
+  }
+}

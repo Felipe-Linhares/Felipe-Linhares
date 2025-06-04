@@ -1,0 +1,92 @@
+/* Styles for the main landing page container */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* General styles for sections */
+section {
+  padding: 96px 0;
+  /* Larger padding for sections */
+  text-align: center;
+  overflow: hidden;
+}
+
+section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 64px;
+  /* More space below titles */
+  color: #1F2937;
+  /* Darker title color */
+  font-weight: 700;
+  /* Bolder titles */
+}
+
+/* No ::after pseudo-element for H2 for a cleaner, modern look */
+
+/* Background colors for alternating sections */
+.bg-light {
+  background-color: #F9FAFB;
+  /* Light background */
+}
+
+.bg-dark {
+  background-color: #111827;
+  /* Dark background */
+  color: #F9FAFB;
+  /* Light text for dark sections */
+}
+
+/* General button styles (used across the app) */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  /* Slightly adjusted padding */
+  border-radius: 8px;
+  /* More rounded corners */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Softer shadow */
+}
+
+.btn-primary {
+  background-color: #6366F1;
+  /* Primary brand color */
+  color: white;
+  border: none;
+  /* No border for primary */
+}
+
+.btn-primary:hover {
+  background-color: #4F46E5;
+  /* Darker primary on hover */
+  transform: translateY(-3px);
+  /* More pronounced lift */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #6366F1;
+  border: 2px solid #6366F1;
+  /* Thicker border for secondary */
+}
+
+.btn-secondary:hover {
+  background-color: #6366F1;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive button adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+}
