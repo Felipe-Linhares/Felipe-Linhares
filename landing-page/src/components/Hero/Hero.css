@@ -1,0 +1,74 @@
+.hero-section {
+  padding: 1rem 0;
+  background-color: #F9FAFB;
+  color: #374151;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #6366F1;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #1F2937;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  color: #4B5563;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.8;
+  color: #4B5563;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive styles for Hero */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .btn - styles already handled in App.css for smaller screens */
+}

@@ -1,0 +1,62 @@
+/* src/index.css */
+
+/* Define CSS Variables (Custom Properties) */
+:root {
+  /* Colors - Light Theme */
+  --color-primary: #6366F1;
+  --color-primary-dark: #4F46E5;
+  --color-secondary: #1F2937;
+  --color-text-main: #374151;
+  --color-text-light: #4B5563;
+  --color-bg-light: #F9FAFB;
+  --color-bg-dark: #111827;
+  --color-white: #FFFFFF;
+  --color-gray-light: #F3F4F6;
+  --color-gray-medium: #D1D5DB;
+
+  /* Optional: Colors for Dark Theme (can be activated with a class on body/html) */
+  /* --color-dark-primary: #7C3AED; */
+  /* --color-dark-primary-dark: #6D28D9; */
+  /* --color-dark-secondary: #E5E7EB; */
+  /* --color-dark-text-main: #D1D5DB; */
+  /* --color-dark-text-light: #9CA3AF; */
+  /* --color-dark-bg-light: #1F2937; */
+  /* --color-dark-bg-dark: #000000; */
+  /* --color-dark-white: #111827; */
+}
+
+/* Resets básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links globais */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+/* Utilitários */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

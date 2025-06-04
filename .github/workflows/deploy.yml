@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Altere para o seu branch principal, se não for 'main'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # O sistema operacional onde o job vai rodar
+
+    steps:
+      - name: Checkout # Pega seu código do repositório
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js # Configura o ambiente Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Use a versão do Node.js que você está usando localmente, ou uma recente LTS
+
+      - name: Install dependencies # Instala as dependências do seu projeto
+        run: npm install
+
+      - name: Build project # Roda o script de build do seu projeto (npm run build)
+        run: npm run build
+
+      - name: Deploy to GitHub Pages # Roda o script de deploy (npm run deploy)
+        run: npm run deploy
+        env:
+          # TOKEN do GitHub para permitir que o gh-pages faça push para o branch gh-pages
+          # Ele é automaticamente fornecido pelo GitHub Actions
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
