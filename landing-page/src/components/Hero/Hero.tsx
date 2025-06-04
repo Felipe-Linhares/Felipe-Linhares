@@ -1,12 +1,13 @@
 import React from "react";
 import "./Hero.css";
+import profilePic from '../../assets/profile.jpg';
 
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="hero-section bg-light">
       <div className="container">
         <img
-          src="/assets/profile.jpg"
+          src={profilePic}
           alt="Profile Picture"
           className="profile-pic"
         />
