@@ -37,11 +37,11 @@ const Header: React.FC = () => {
               Habilidades
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#about" onClick={handleNavLinkClick}>
               Sobre
             </a>
-          </li>
+          </li>: */}
           <li>
             <a href="#contact" onClick={handleNavLinkClick}>
               Contatos
