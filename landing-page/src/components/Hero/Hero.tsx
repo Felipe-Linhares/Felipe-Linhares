@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section id="hero" className="hero-section bg-light">
       <div className="container">
         <img
-          src="/landing-page/src/assets/profile.jpg"
+          src="/assets/profile.jpg"
           alt="Your Profile Picture"
           className="profile-pic"
         />
