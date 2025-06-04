@@ -6,8 +6,8 @@ const Hero: React.FC = () => {
     <section id="hero" className="hero-section bg-light">
       <div className="container">
         <img
-          src="../../assets/profile.jpg"
-          alt="Your Profile Picture"
+          src="/assets/profile.jpg"
+          alt="Profile Picture"
           className="profile-pic"
         />
         <h1 className="hero-title">Olá, sou Felipe Linhares.</h1>
